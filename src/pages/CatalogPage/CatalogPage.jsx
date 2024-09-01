@@ -7,23 +7,22 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { fetchCampers } from "../../redux/campers/operations.js";
 
-
 export default function CatalogPage() {
-  const dispatch = useDispatch(); 
-  useEffect(() => {    
-     dispatch(fetchCampers());
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchCampers());
   }, [dispatch]);
-  
+
   return (
     <>
       <Helmet>
         <title>Catalog</title>
       </Helmet>
-          <AppBar />
-          <div className={css.camperSection}>           
-      <CatalogOptions />
-      <CamperList />
-          </div>
+      <AppBar />
+      <div className={css.camperSection}>
+        <CatalogOptions />
+        <CamperList />
+      </div>
     </>
   );
 }

@@ -3,7 +3,6 @@ import { MdFavoriteBorder, MdOutlineBathroom } from "react-icons/md";
 import { CiStar, CiMap } from "react-icons/ci";
 import { FaGasPump } from "react-icons/fa6";
 import { BsCupHot } from "react-icons/bs";
-import { GiGasStove } from "react-icons/gi";
 import { FaTv } from "react-icons/fa";
 
 export default function CamperItem({
@@ -35,6 +34,11 @@ export default function CamperItem({
     width,
   },
 }) {
+
+  const handleClick = (id) => {
+    const newTabUrl = `/catalog/${id}`;
+    window.open(newTabUrl, "_blank");
+  };
   return (
     <div className={css.card}>
       <img className={css.image} src={gallery[0].original} alt="car" />
@@ -121,7 +125,9 @@ export default function CamperItem({
             </div>
           )}
         </div>
-        <button className={css.butShowMore}>Show more</button>
+        <button className={css.butShowMore} onClick={() => handleClick(id)}>
+          Show more
+        </button>
       </div>
     </div>
   );

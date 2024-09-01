@@ -34,35 +34,30 @@ export default function CatalogOptions() {
   return (
     <div>
       <SearchBox />
-      <div className="filters">
-        <h3 className="heading">Vehicle equipment</h3>
-        <div className="equipmentOptions">
-          <button
-            className={`filterBtn ${selectedFilters.ac ? "active" : ""}`}
-            onClick={() => toggleFilter("ac")}
-          >
+      <p className={css.pFilt}>Filters</p>
+      <div className={css.filters}>
+        <h3 className={css.heading}>Vehicle equipment</h3>
+        <div className={css.equipmentOptions}>
+          <button className={css.filterBtn} onClick={() => toggleFilter("ac")}>
             AC
           </button>
           <button
-            className={`filterBtn ${selectedFilters.automatic ? "active" : ""}`}
+            className={css.filterBtn}
             onClick={() => toggleFilter("automatic")}
           >
             Automatic
           </button>
           <button
-            className={`filterBtn ${selectedFilters.kitchen ? "active" : ""}`}
+            className={css.filterBtn}
             onClick={() => toggleFilter("kitchen")}
           >
             Kitchen
           </button>
-          <button
-            className={`filterBtn ${selectedFilters.tv ? "active" : ""}`}
-            onClick={() => toggleFilter("tv")}
-          >
+          <button className={css.filterBtn} onClick={() => toggleFilter("tv")}>
             TV
           </button>
           <button
-            className={`filterBtn ${selectedFilters.bathroom ? "active" : ""}`}
+            className={css.filterBtn}
             onClick={() => toggleFilter("bathroom")}
           >
             Bathroom
@@ -71,29 +66,24 @@ export default function CatalogOptions() {
 
         <h3 className="heading">Vehicle type</h3>
         <div className="vehicleOptions">
-          <button
-            className={`filterBtn ${selectedFilters.van ? "active" : ""}`}
-            onClick={() => toggleFilter("van")}
-          >
+          <button className={css.filterBtn} onClick={() => toggleFilter("van")}>
             Van
           </button>
           <button
-            className={`filterBtn ${
-              selectedFilters.fullyIntegrated ? "active" : ""
-            }`}
+            className={css.filterBtn}
             onClick={() => toggleFilter("fullyIntegrated")}
           >
             Fully Integrated
           </button>
           <button
-            className={`filterBtn ${selectedFilters.alcove ? "active" : ""}`}
+            className={css.filterBtn}
             onClick={() => toggleFilter("alcove")}
           >
             Alcove
           </button>
         </div>
 
-        <button className="searchBtn" onClick={handleSearch}>
+        <button className={css.searchBtn} onClick={handleSearch}>
           Search
         </button>
       </div>
