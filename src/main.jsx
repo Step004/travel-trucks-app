@@ -5,16 +5,18 @@ import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { Provider } from "react-redux";
-import { store } from "./redux/store.js";
-
+import { persistor, store } from "./redux/store.js"; // Імпортуємо тільки тут
+import { PersistGate } from "redux-persist/integration/react";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <HelmetProvider>
       <Provider store={store}>
+        <PersistGate loading={null} persistor={persistor}>
           <BrowserRouter>
             <App />
           </BrowserRouter>
+        </PersistGate>
       </Provider>
     </HelmetProvider>
   </StrictMode>

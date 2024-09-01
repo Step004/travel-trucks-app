@@ -1,0 +1,154 @@
+.img {
+    width: 292px;
+    height: 312px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.imgList{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px;
+    margin-top: 28px;
+}
+.descriptionCar {
+    width: 100%;
+}
+
+.card {
+    display: flex;
+    gap: 24px;
+    border: 1px solid var(--gray-light);
+    border-radius: 20px;
+    padding: 24px;
+    width: 888px;
+    height: 368px;
+    box-sizing: border-box;
+}
+
+.nameCar {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 133%;
+    color: var(--main);
+}
+
+.firstRow {
+    display: flex;
+    flex-direction: column;
+}
+
+.price {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 133%;
+    color: var(--main);
+}
+
+.favorite {
+    width: 25px;
+    height: 24px;
+}
+
+.buttonFav {
+    background: none;
+}
+
+.favorite .chused {
+    fill: #E44848;
+}
+
+.star {
+    width: 16px;
+    height: 16px;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--main);
+}
+
+.map {
+    width: 24px;
+    height: 24px;
+}
+
+.secondRow {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    padding-bottom: 24px;
+}
+
+.rating {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.reviews {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    text-underline-offset: 4px;
+    color: var(--main);
+}
+
+.description {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 525px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--text);
+    padding-bottom: 24px;
+}
+
+.foursRow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-bottom: 24px;
+}
+
+.transmission,
+.engine {
+    text-transform: capitalize;
+}
+
+.foursRow>div {
+    padding: 12px 18px;
+    width: calc((100% - 24px) / 4);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: var(--main);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.butShowMore {
+    border-radius: 200px;
+    width: 166px;
+    height: 56px;
+    background: var(--button);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.01em;
+    color: var(--white);
+}
+
+.butShowMore:hover {
+    background: var(--button-hover);
+}

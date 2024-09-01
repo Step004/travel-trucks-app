@@ -2,6 +2,8 @@ import { createSelector } from "@reduxjs/toolkit";
 import { selectLocationFilter } from "../filters/selectors.js";
 
 export const selectCampers = (state) => state.camper.items.items;
+export const selectCamper = (state) => state.camper.item;
+
 export const selectTotal = (state) => state.camper.items.total;
 export const selectLoading = (state) => state.camper.loading;
 export const selectError = (state) => state.camper.error;

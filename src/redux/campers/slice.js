@@ -4,6 +4,7 @@ import { fetchCampers, fetchCampersById } from "./operations.js";
 
 const camperInitialState = {
   items: [],
+  item:[],
   loading: false,
   error: false,
 };
@@ -30,9 +31,7 @@ const slice = createSlice({
         state.loading = true;
       })
       .addCase(fetchCampersById.fulfilled, (state, action) => {
-        state.items = state.items.filter(
-          (camper) => camper.id === action.payload.id
-        );
+        state.item = action.payload;
         state.loading = false;
       })
       .addCase(fetchCampersById.rejected, (state) => {
