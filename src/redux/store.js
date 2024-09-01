@@ -1,8 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
-// import camperReducer from "./campers/slice";
+import camperReducer from "./campers/slice";
 import filterReducer from "./filters/slice";
 import {
-  persistStore,
   FLUSH,
   REHYDRATE,
   PAUSE,
@@ -13,7 +12,7 @@ import {
 
 export const store = configureStore({
   reducer: {
-    // contact: camperReducer,
+    camper: camperReducer,
     filter: filterReducer,
   },
   middleware: (getDefaultMiddleware) =>
@@ -23,5 +22,3 @@ export const store = configureStore({
       },
     }),
 });
-
-export const persistor = persistStore(store);

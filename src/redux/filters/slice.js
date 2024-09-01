@@ -1,24 +1,20 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const contactInitialState = {
+const camperInitialState = {
   filters: {
-    name: "",
-    number: "",
+    location: "",
   },
 };
 
 const slice = createSlice({
   name: "filters",
-  initialState: contactInitialState,
+  initialState: camperInitialState,
   reducers: {
     changeFilter: (state, action) => {
-      state.filters.name = action.payload;
-    },
-    changeNumberFilter: (state, action) => {
-      state.filters.number = action.payload;
+      state.filters.location = action.payload;
     },
   },
 });
-export const { changeFilter, changeNumberFilter } = slice.actions;
+export const { changeFilter } = slice.actions;
 
 export default slice.reducer;
