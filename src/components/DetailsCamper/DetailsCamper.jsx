@@ -4,6 +4,8 @@ import { CiStar, CiMap } from "react-icons/ci";
 import { FaGasPump } from "react-icons/fa6";
 import { BsCupHot } from "react-icons/bs";
 import { FaTv } from "react-icons/fa";
+import { NavLink, Outlet } from "react-router-dom";
+import clsx from "clsx";
 export default function DetailsCamper({
   camper: {
     id,
@@ -34,10 +36,13 @@ export default function DetailsCamper({
   },
 }) {
   if (!reviews) {
-    return <div>Loading...</div>; // або будь-який інший спосіб відображення, коли дані ще не завантажені
+    return <div>Loading...</div>; // 
   }
+const buildLinkClass = ({ isActive }) => {
+  return clsx(css.link, isActive && css.active);
+};
   return (
-    <>
+    <div className={css.camperSection}>
       <p className={css.nameCar}>{name}</p>
       <div className={css.secondRow}>
         <div className={css.rating}>
@@ -54,9 +59,28 @@ export default function DetailsCamper({
       <p className={css.price}>€{price}.00</p>
       <div className={css.imgList}>
         {gallery.map((element) => (
-          <img className={css.img} key={element.original} src={element.original} alt="car" />
+          <img
+            className={css.img}
+            key={element.original}
+            src={element.original}
+            alt="car"
+          />
         ))}
       </div>
-    </>
+      <p className={css.descriptionCar}>{description}</p>
+      <ul className={css.list}>
+        <li>
+          <NavLink to="features" className={buildLinkClass}>
+            Features
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="reviews" className={buildLinkClass}>
+            Reviews
+          </NavLink>
+        </li>
+      </ul>
+      <Outlet />
+    </div>
   );
 }

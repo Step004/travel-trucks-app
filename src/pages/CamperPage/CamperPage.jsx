@@ -20,7 +20,6 @@ export default function CamperPage() {
     if (!camper ) {
         dispatch(fetchCampersById(id));
     }
-    console.log(camper);
     
     
   return (

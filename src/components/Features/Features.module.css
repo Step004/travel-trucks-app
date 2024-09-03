@@ -1,0 +1,72 @@
+.container {
+    width: 631px;
+    padding: 44px 52px;
+    box-sizing: border-box;
+    background: var(--inputs);
+}
+.containers{
+    display: flex;
+    justify-content: space-between;
+}
+
+.foursRow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 100px;
+}
+
+.transmission,
+.engine {
+    text-transform: capitalize;
+}
+
+.option {
+    text-transform: capitalize;
+}
+
+.listItem>p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: var(--main);
+}
+.listOptions{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.foursRow>div {
+    width: calc((100% - 24px) / 4);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: var(--main);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-radius: 100px;
+    height: 48px;
+    background: var(--badges);
+
+}
+
+.title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+    color: var(--main);
+    border-bottom: 1px solid var(--gray-light);
+    ;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+}
+
+.listItem {
+    display: flex;
+    justify-content: space-between;
+}
