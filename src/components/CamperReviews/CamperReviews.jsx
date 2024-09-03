@@ -54,7 +54,7 @@ export default function CamperReviews() {
                   <p>{renderStars(review.reviewer_rating)}</p>
                 </div>
               </div>
-              <p>{review.comment}</p>
+              <p className={css.comment}>{review.comment}</p>
             </li>
           ))}
         </ul>

@@ -3,6 +3,8 @@ import { createSlice } from "@reduxjs/toolkit";
 const camperInitialState = {
   filters: {
     location: "",
+    equipment: [],
+    vehicleType: [],
   },
 };
 
