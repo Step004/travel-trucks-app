@@ -1,0 +1,70 @@
+.equipmentPargraph {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.2;
+    color: #101828;
+    margin-top: 32px;
+    position: relative;
+}
+
+.equipmentPargraph::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #dadde1;
+    bottom: -24px;
+    left: 0;
+}
+
+.equipmentList {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 48px;
+    margin-bottom: 32px;
+}
+
+.equipmentListItem {
+    border: 1px solid #dadde1;
+    border-radius: 12px;
+    width: 112px;
+    height: 96px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: border 0.3s;
+}
+
+.equipmentListItem input[type='checkbox'] {
+    display: none;
+}
+
+.equipmentListItem input[type='checkbox']:checked+label {
+    border: 1px solid #e44848;
+    border-radius: 12px;
+}
+
+.equipmentLabel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 8px;
+    width: 100%;
+    height: 100%;
+    padding: 16px 18px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+}
+
+.accessoriesIcon {
+    width: 32px;
+    min-height: 32px;
+    color: #101828;
+}

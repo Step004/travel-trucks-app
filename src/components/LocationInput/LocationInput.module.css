@@ -1,0 +1,42 @@
+.labelFilters {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #475467;
+}
+
+.inputWrapper {
+    position: relative;
+    height: 56px;
+    width: 320px;
+    margin-bottom: 40px;
+}
+
+.inputFilters {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    padding: 18px 0 18px 48px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #101828;
+    background-color: #f7f7f7;
+    outline: none;
+    border: none;
+    margin-top: 8px;
+}
+
+.inputFilters:focus+.iconLocation,
+.inputFilters:active+.iconLocation {
+    color: #101828;
+}
+
+.iconLocation {
+    position: absolute;
+    top: 25px;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    transition: color 0.3s;
+}

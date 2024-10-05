@@ -23,11 +23,12 @@
     width: 100%;
     padding: 18px 18px 18px 40px;
     border: none;
-    border-radius: 5px;
+    border-radius: 12px;
     font-weight: 400;
     font-size: 16px;
     line-height: 150%;
     color: var(--main);
+    background-color: #f7f7f7;
 }
 
 .inputField::placeholder {

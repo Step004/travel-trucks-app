@@ -13,7 +13,9 @@ const slice = createSlice({
   initialState: camperInitialState,
   reducers: {
     changeFilter: (state, action) => {
-      state.filters.location = action.payload;
+      state.filters.location = action.payload.location;
+      state.filters.equipment = action.payload.equipment;
+      state.filters.vehicleType = action.payload.vehicleType;
     },
   },
 });
